@@ -1,67 +1,175 @@
 @import "tailwindcss";
 
+@theme {
+  --color-accent: #00f2ff;
+  --color-background: #050505;
+  --color-foreground: #ffffff;
+}
+
+:root {
+  --background: #050505;
+  --foreground: #ffffff;
+  --accent: #00f2ff;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
 body {
-  background-color: #000; /* Bright grey for visibility */
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
 }
-.banner {
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+.carousel-container {
+  perspective: 2000px;
   width: 100%;
   height: 100vh;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   position: relative;
-  background-color: #000; /* More visible blue-grey */
-  perspective: 1500px; /* Perspective on parent */
 }
-.slider {
-  position: absolute;
-  width: 200px;
-  height: 250px;
-  top: 35%; /* Adjusted top */
-  left: calc(50% - 100px);
+
+.carousel-stage {
+  position: relative;
+  width: 300px;
+  height: 400px;
   transform-style: preserve-3d;
-  animation: autoRun 30s linear infinite;
+  will-change: transform;
 }
-.banner .slider .item {
+
+.carousel-card {
   position: absolute;
   inset: 0;
-  transform: rotateY(
-      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
-    )
-    translateZ(450px);
-  background: #000;
-  transition: all 0.5s ease;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 3px 4px 5px rgba(132, 130, 130, 0.5);
+  width: 300px;
+  height: 400px;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  will-change: transform;
+  transform: translateZ(0);
 }
-.banner .slider .item img {
+
+.card-inner {
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
+  transform-style: preserve-3d;
+  transition:
+    transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 0.6s ease;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
-@keyframes autoRun {
-  from {
-    transform: rotateX(14deg) rotateY(0deg);
+
+.card-inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+
+.carousel-card:hover .card-inner {
+  transform: scale(1.05) translateZ(30px);
+  box-shadow: 0 0 50px rgba(0, 242, 255, 0.3);
+  filter: brightness(1.1);
+}
+
+.reflection {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -110%;
+  left: 0;
+  transform: scaleY(-1);
+  opacity: 0.8;
+  mask-image: linear-gradient(to top, transparent 20%, white);
+  -webkit-mask-image: linear-gradient(to top, transparent 20%, white);
+  pointer-events: none;
+  transition:
+    transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.6s ease;
+}
+
+.carousel-card:hover .reflection {
+  transform: scaleY(-1) scaleX(1.05) translateY(-10px) translateZ(0);
+  opacity: 0.3;
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@keyframes ambientGlow {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0, 0) scale(1) translateX(16deg);
   }
-  to {
-    transform: rotateX(14deg) rotateY(360deg);
+  33% {
+    opacity: 0.5;
+    transform: translateY(50px, -50px) scale(1.1) translateX(16deg);
+  }
+  66% {
+    opacity: 0.4;
+    transform: translateY(-30px, 40px) scale(0.9) translateX(16deg);
   }
 }
-.slider:hover {
-  animation-play-state: paused;
+
+.ambient-light {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  filter: blur(100px);
+  z-index: -1;
+  pointer-events: none;
+  animation: ambientGlow 18s infinite ease-in-out;
 }
-.slider .item:hover {
-  filter: brightness(1.2);
-  box-shadow:
-    0 0 20px #fff,
-    0 0 40px #6c63ff;
-  transform: rotateY(
-      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
-    )
-    translateZ(420px) scale(1.2);
+
+@media (max-width: 768px) {
+  .carousel-stage {
+    width: 220px;
+    height: 320px;
+  }
+  .carousel-card {
+    width: 220px;
+    height: 320px;
+  }
 }
