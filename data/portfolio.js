@@ -1,101 +1,51 @@
-import { Target } from "lucide-react";
-
 export const portfolioData = [
+  // ---------------- ENGLISH VERSION (1-5) ----------------
   {
-    id: "about",
+    id: "about_en",
     title: "About Me",
     description:
-      "Aspiring full-stack developer passionate about modern web experiences.",
+      "Aspiring full-stack developer passionate about modern web technologies.",
     image: "/zurag1.jpeg",
     content: {
       introduction: "Hello, I'm Myagmardorj Baatar.",
-      bio: "I am a junior developer from Mongolia currently learning React, Next.js, and modern frontend technologies. I enjoy creating clean, interactive, and user-friendly web applications while continuously improving my programming and design skills.",
+      bio: "I am a junior developer from Mongolia currently studying React, Next.js, and frontend development. I enjoy building modern user interfaces, interactive websites, and learning new technologies every day.",
       goals:
-        "My goal is to become a professional full-stack developer, work internationally, and build digital products that solve real-world problems.",
+        "My goal is to become a professional software engineer and create impactful digital products.",
     },
   },
-
   {
-    id: "skills",
-    title: "Skills",
-    description: "Technologies and tools I am learning and using.",
-    image: "/zurag2.jpeg",
-    content: {
-      skills: [
-        { name: "HTML", level: 90 },
-        { name: "CSS", level: 85 },
-        { name: "JavaScript", level: 80 },
-        { name: "React", level: 75 },
-        { name: "Next.js", level: 70 },
-        { name: "Tailwind CSS", level: 80 },
-        { name: "Firebase", level: 65 },
-      ],
-    },
-  },
-
-  {
-    id: "projects",
+    id: "projects_en",
     title: "Projects",
-    description: "Some projects I have worked on.",
-    image: "/zurag3.jpeg",
+    description: "Some projects and ideas I have worked on.",
+    image: "/zurag2.jpeg",
     content: {
       projects: [
         {
-          title: "ЭЕШ материалууд",
+          title: "EYESH Preparation Platform",
           description:
-            "A platform for students to prepare for entrance exams with PDF materials and practice tests.",
+            "A learning platform for Mongolian students preparing for entrance exams.",
           tech: ["Next.js", "Tailwind CSS", "Firebase"],
+          github: "#",
+          live: "#",
+          image: "/zurag3.jpeg",
+        },
+        {
+          title: "Interactive 3D Portfolio",
+          description:
+            "A futuristic animated portfolio website featuring smooth transitions.",
+          tech: ["React", "Framer Motion", "Tailwind CSS"],
           github: "#",
           live: "#",
           image: "/zurag4.jpeg",
         },
-        {
-          title: "Interactive Portfolio",
-          description:
-            "A modern 3D animated portfolio website inspired by futuristic UI design.",
-          tech: ["React", "Framer Motion", "Tailwind CSS"],
-          github: "#",
-          live: "#",
-          image: "/zurag5.jpeg",
-        },
       ],
     },
   },
-
   {
-    id: "experience",
-    title: "Experience",
-    description: "My work journey and experience.",
-    image: "/zurag4.jpeg",
-    content: {
-      items: [
-        {
-          role: "Receptionist",
-          company: "Baatarvan Resort",
-          period: "2024 - 2025",
-          desc: "Worked as a receptionist handling customer service, reservations, and daily operations.",
-        },
-        {
-          role: "Server",
-          company: "Baatarvan Resort",
-          period: "2024",
-          desc: "Provided customer service and assisted guests in a fast-paced environment.",
-        },
-        {
-          role: "Kitchen Assistant & Chef",
-          company: "Toilogt Tourist Camp",
-          period: "2022 - 2023",
-          desc: "Prepared meals and assisted kitchen operations during the tourism season.",
-        },
-      ],
-    },
-  },
-
-  {
-    id: "education",
+    id: "education_en",
     title: "Education",
-    description: "My educational background.",
-    image: "/zurag5.jpeg",
+    description: "My educational background and learning journey.",
+    image: "/zurag3.jpeg",
     content: {
       items: [
         {
@@ -104,77 +54,154 @@ export const portfolioData = [
           year: "2020 - 2023",
         },
         {
-          degree: "Self-learning Web Development",
-          school: "Online Courses & Personal Projects",
+          degree: " Web Development",
+          school: "Online Courses & Erxes Academy",
           year: "2024 - Present",
         },
       ],
     },
   },
-
   {
-    id: "contact",
+    id: "experience_en",
+    title: "Experience",
+    description: "My work experience and professional journey.",
+    image: "/zurag4.jpeg",
+    content: {
+      items: [
+        {
+          role: "Receptionist",
+          company: "Baatarvan Resort",
+          period: "2024 - 2025",
+          desc: "Handled reservations and customer service.",
+        },
+        {
+          role: "Chef",
+          company: "Toilogt Tourist Camp",
+          period: "2022 - 2023",
+          desc: "Prepared meals and managed kitchen tasks.",
+        },
+      ],
+    },
+  },
+  {
+    id: "contact_en",
     title: "Contact",
-    description: "Let's connect and build something together.",
-    image: "/zurag6.jpeg",
+    description: "Let's connect and create something amazing together.",
+    image: "/zurag5.jpeg",
     content: {
       email: "myagmardorj@example.com",
+      phone: "+976 9999 9999",
+      location: "Ulaanbaatar, Mongolia",
       socials: [
         {
           name: "Github",
           url: "https://github.com/mygaaa535/Portfolio1",
-
           icon: "Github",
         },
         { name: "LinkedIn", url: "#", icon: "Linkedin" },
-        { name: "Instagram", url: "#", icon: "Instagram" },
       ],
     },
   },
 
+  // ---------------- MONGOLIAN VERSION (6-10) ----------------
   {
-    id: "gallery",
-    title: "Gallery",
-    description: "Moments from my learning and creative journey.",
+    id: "about_mn",
+    title: "Миний тухай",
+    description: "Орчин үеийн веб технологид сонирхолтой хөгжүүлэгч.",
+    image: "/zurag6.jpeg",
+    content: {
+      introduction: "Сайн байна уу, намайг Баатарын Мягмардорж гэдэг.",
+      bio: "Би Монгол улсаас гаралтай junior developer бөгөөд React, Next.js болон frontend хөгжүүлэлт сурч байна. Орчин үеийн дизайнтай веб сайт бүтээх дуртай.",
+      goals:
+        "Миний зорилго бол мэргэжлийн software engineer болж, хүмүүст хэрэгтэй бүтээгдэхүүн бүтээх юм.",
+    },
+  },
+  {
+    id: "projects_mn",
+    title: "Төслүүд",
+    description: "Миний хийж байсан болон хөгжүүлж буй төслүүд.",
     image: "/zurag7.jpeg",
     content: {
-      images: ["/zurag1.jpeg", "/zurag2.jpeg", "/zurag3.jpeg", "/zurag4.jpeg"],
+      projects: [
+        {
+          title: "ЭЕШ Бэлтгэлийн Платформ",
+          description:
+            "Элсэлтийн шалгалтад бэлдэх сурагчдад зориулсан платформ.",
+          tech: ["Next.js", "Tailwind CSS", "Firebase"],
+          github: "#",
+          live: "#",
+          image: "/zurag1.jpeg",
+        },
+        {
+          title: "Interactive 3D Portfolio",
+          description:
+            "Орчин үеийн дизайнтай, animation эффектүүдтэй portfolio веб сайт.",
+          tech: ["React", "Framer Motion", "Tailwind CSS"],
+          github: "#",
+          live: "#",
+          image: "/zurag2.jpeg",
+        },
+      ],
     },
   },
-
   {
-    id: "goals",
-    title: "Goals",
-    description: "My future vision and ambitions.",
+    id: "education_mn",
+    title: "Боловсрол",
+    description: "Миний боловсрол болон суралцаж буй чиглэлүүд.",
     image: "/zurag8.jpeg",
     content: {
-      vision:
-        "I want to study and work abroad, become a skilled software engineer, and create innovative digital experiences for people around the world.",
+      items: [
+        {
+          degree: "Тогоочийн мэргэжлийн үнэмлэх",
+          school: "Хөвсгөл Политехник Коллеж",
+          year: "2020 - 2023",
+        },
+        {
+          degree: "Веб хөгжүүлэлт  Pada-1-7 д суралцаж байгаа",
+          school: "Онлайн хичээлүүд болон Erxes academy",
+          year: "2024 - Одоо",
+        },
+      ],
     },
   },
-
   {
-    id: "resume",
-    title: "Resume",
-    description: "Download my resume and learn more about my background.",
+    id: "experience_mn",
+    title: "Ажлын туршлага",
+    description: "Миний ажиллаж байсан туршлагууд.",
     image: "/zurag9.jpeg",
     content: {
-      downloadUrl: "#",
+      items: [
+        {
+          role: "Ресепшн",
+          company: "Baatarvan Resort",
+          period: "2024 - 2025",
+          desc: "Захиалга бүртгэх, харилцагчидтай ажиллах.",
+        },
+        {
+          role: "Тогооч",
+          company: "Тойлогт Жуулчны Бааз",
+          period: "2022 - 2023",
+          desc: "Хоол бэлтгэх, гал тогооны үйл ажиллагаанд оролцсон.",
+        },
+      ],
     },
   },
-
   {
-    id: "socials",
-    title: "Social Links",
-    description: "Find me on social media.",
+    id: "contact_mn",
+    title: "Холбоо барих",
+    description: "Хамтран ажиллах бол надтай холбогдоорой.",
     image: "/zurag10.jpeg",
     content: {
-      links: [
+      email: "myagmardorj@example.com",
+      phone: "+976 9999 9999",
+      location: "Улаанбаатар, Монгол",
+      socials: [
         {
           name: "Github",
           url: "https://github.com/mygaaa535/Portfolio1",
+          icon: "Github",
         },
-        { name: "Instagram", url: "#" },
+        { name: "LinkedIn", url: "#", icon: "Linkedin" },
       ],
     },
   },

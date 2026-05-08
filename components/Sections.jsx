@@ -197,9 +197,7 @@ export const EducationSection = ({ data }) => (
         className="p-6 bg-white/5 rounded-2xl border border-white/10 space-y-3"
       >
         <div className="flex justify-between items-start">
-          <div className="p-3 bg-accent/10 rounded-xl text-accent">
-            {/* Icon removed */}
-          </div>
+          <div className="p-3 bg-accent/10 rounded-xl text-accent"></div>
           <span className="text-gray-500 font-mono text-xs">{item.year}</span>
         </div>
         <h3 className="text-xl font-bold text-white">{item.degree}</h3>
@@ -242,9 +240,7 @@ export const GoalsSection = ({ data }) => (
     <motion.div
       variants={itemVariants}
       className="inline-flex p-4 bg-accent/10 rounded-full text-accent mb-4"
-    >
-      {/* Icon removed */}
-    </motion.div>
+    ></motion.div>
     <motion.h3
       variants={itemVariants}
       className="text-3xl font-bold text-white"
@@ -270,9 +266,7 @@ export const ResumeSection = ({ data }) => (
     <motion.div
       variants={itemVariants}
       className="w-24 h-32 bg-white/5 border-2 border-dashed border-white/20 rounded-lg flex items-center justify-center text-white/20"
-    >
-      {/* Icon removed */}
-    </motion.div>
+    ></motion.div>
     <div className="text-center space-y-2">
       <motion.h3
         variants={itemVariants}
@@ -338,9 +332,9 @@ export const ContactSection = ({ data }) => (
         variants={itemVariants}
         whileHover={{ scale: 1.02, y: -2 }}
         whileTap={{ scale: 0.98 }}
-        className="w-full bg-accent text-black font-black uppercase tracking-widest py-5 rounded-xl hover:shadow-[0_0_30px_rgba(0,242,255,0.4)] transition-all flex items-center justify-center gap-3"
+        className="w-full bg-gray-800 text-white font-black uppercase tracking-widest py-5 rounded-xl hover:shadow-[0_0_30px_rgba(0,242,255,0.4)] transition-all flex items-center justify-center gap-3"
       >
-        Send Transmission
+        Send
       </motion.button>
     </div>
 
@@ -352,11 +346,10 @@ export const ContactSection = ({ data }) => (
               <a
                 key={social.name}
                 href={social.url}
+                target="_blank"
                 className="group flex flex-col items-center gap-2 text-gray-500 hover:text-accent transition-colors"
               >
-                <div className="p-3 bg-white/5 rounded-full group-hover:bg-accent/10 transition-colors">
-                  {/* Icon removed */}
-                </div>
+                <div className="p-3 bg-white/5 rounded-full group-hover:bg-accent/10 transition-colors"></div>
                 <span className="text-[10px] uppercase tracking-widest font-medium">
                   {social.name}
                 </span>

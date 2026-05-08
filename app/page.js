@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import ThreeDCarousel from "@/components/Carousel/3DCarousel";
 import BackgroundEffects from "@/components/BackgroundEffects";
 import GlobalModal from "@/components/Modal/GlobalModal";
@@ -31,7 +31,7 @@ export default function Home() {
 
     const data = selectedCard.content;
 
-    switch (selectedCard.id) {
+    switch (selectedCard.id.split("_")[0]) {
       case "about":
         return <AboutSection data={data} />;
       case "skills":
@@ -51,24 +51,13 @@ export default function Home() {
       case "contact":
       case "socials":
         return <ContactSection data={data} />;
-      default:
-        return (
-          <div className="space-y-4">
-            <p className="text-gray-400 text-lg">{selectedCard.description}</p>
-            <div className="p-8 bg-white/5 rounded-2xl border border-white/10 text-center">
-              <p className="text-gray-500 italic">
-                Detailed information for {selectedCard.title} coming soon.
-              </p>
-            </div>
-          </div>
-        );
     }
   };
 
   return (
     <main className="relative min-h-screen overflow-hidden">
       <BackgroundEffects />
-      <nav className="fixed top-0 left-0 w-full p-8 z-50 flex justify-between items-center">
+      <nav className="fixed top-0 left-0 w-full py-8 px-12 z-50 flex justify-between items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -76,6 +65,7 @@ export default function Home() {
         >
           PORTFOLIO<span className="text-accent">.</span>
         </motion.div>
+        
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -83,9 +73,6 @@ export default function Home() {
         >
           <span className="hover:text-white cursor-pointer transition-colors">
             Myagmardorj
-          </span>
-          <span className="hover:text-white cursor-pointer transition-colors">
-            Baatar
           </span>
         </motion.div>
       </nav>
