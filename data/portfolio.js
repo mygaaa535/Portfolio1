@@ -1,5 +1,4 @@
 export const portfolioData = [
-  // ---------------- ENGLISH VERSION (1-5) ----------------
   {
     id: "about_en",
     title: "About Me",
@@ -7,7 +6,7 @@ export const portfolioData = [
       "Aspiring full-stack developer passionate about modern web technologies.",
     image: "/zurag1.jpeg",
     content: {
-      introduction: "Hello, I'm Myagmardorj Baatar.",
+      introduction: "Hello, I'm Myagmardorj.",
       bio: "I am a junior developer from Mongolia currently studying React, Next.js, and frontend development. I enjoy building modern user interfaces, interactive websites, and learning new technologies every day.",
       goals:
         "My goal is to become a professional software engineer and create impactful digital products.",
@@ -21,7 +20,7 @@ export const portfolioData = [
     content: {
       projects: [
         {
-          title: "EYESH Preparation Platform",
+          title: "ЭЕШ Preparation Platform",
           description:
             "A learning platform for Mongolian students preparing for entrance exams.",
           tech: ["Next.js", "Tailwind CSS", "Firebase"],
@@ -56,7 +55,7 @@ export const portfolioData = [
         {
           degree: " Web Development",
           school: "Online Courses & Erxes Academy",
-          year: "2024 - Present",
+          year: "2026 - Present",
         },
       ],
     },
@@ -103,7 +102,6 @@ export const portfolioData = [
     },
   },
 
-  // ---------------- MONGOLIAN VERSION (6-10) ----------------
   {
     id: "about_mn",
     title: "Миний тухай",
@@ -111,7 +109,7 @@ export const portfolioData = [
     image: "/zurag6.jpeg",
     content: {
       introduction: "Сайн байна уу, намайг Баатарын Мягмардорж гэдэг.",
-      bio: "Би Монгол улсаас гаралтай junior developer бөгөөд React, Next.js болон frontend хөгжүүлэлт сурч байна. Орчин үеийн дизайнтай веб сайт бүтээх дуртай.",
+      bio: "Би  junior developer бөгөөд React, Next.js болон frontend хөгжүүлэлт сурч байна. Орчин үеийн дизайнтай веб сайт бүтээх дуртай.",
       goals:
         "Миний зорилго бол мэргэжлийн software engineer болж, хүмүүст хэрэгтэй бүтээгдэхүүн бүтээх юм.",
     },
@@ -159,7 +157,7 @@ export const portfolioData = [
         {
           degree: "Веб хөгжүүлэлт  Pada-1-7 д суралцаж байгаа",
           school: "Онлайн хичээлүүд болон Erxes academy",
-          year: "2024 - Одоо",
+          year: "2026 - Одоо",
         },
       ],
     },
