@@ -23,9 +23,9 @@ export const portfolioData = [
           title: "ЭЕШ Preparation Platform",
           description:
             "A learning platform for Mongolian students preparing for entrance exams.",
-          tech: ["Next.js", "Tailwind CSS", "Firebase"],
-          github: "#",
-          live: "#",
+          tech: ["Next.js", "Tailwind CSS", "Supabase"],
+          github: "https://github.com/mygaaa535/yesh-materials",
+          live: "https://yesh-materials.vercel.app",
           image: "/yesh-materials.png",
         },
         {
@@ -33,8 +33,8 @@ export const portfolioData = [
           description:
             "A futuristic animated portfolio website featuring smooth transitions.",
           tech: ["React", "Framer Motion", "Tailwind CSS"],
-          github: "#",
-          live: "#",
+          github: "https://github.com/mygaaa535/Portfolio1",
+          live: "https://portfolio1-psi-umber.vercel.app/",
           image: "/3d-portfolio.png",
         },
       ],
@@ -125,9 +125,9 @@ export const portfolioData = [
           title: "ЭЕШ Бэлтгэлийн Платформ",
           description:
             "Элсэлтийн шалгалтад бэлдэх сурагчдад зориулсан платформ.",
-          tech: ["Next.js", "Tailwind CSS", "Firebase"],
-          github: "#",
-          live: "#",
+          tech: ["Next.js", "Tailwind CSS", "Supabase"],
+          github: "https://github.com/mygaaa535/yesh-materials",
+          live: "https://yesh-materials.vercel.app",
           image: "/yesh-materials.png",
         },
         {
@@ -135,8 +135,8 @@ export const portfolioData = [
           description:
             "Орчин үеийн дизайнтай, animation эффектүүдтэй portfolio веб сайт.",
           tech: ["React", "Framer Motion", "Tailwind CSS"],
-          github: "#",
-          live: "#",
+          github: "https://github.com/mygaaa535/Portfolio1",
+          live: "https://portfolio1-psi-umber.vercel.app/",
           image: "/3d-portfolio.png",
         },
       ],
